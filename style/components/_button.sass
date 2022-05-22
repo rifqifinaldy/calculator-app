@@ -1,0 +1,39 @@
+// Button Mixin
+@mixin btn-calculator($color: $primary, $width: 75px, $height: 75px)
+    width: $width
+    height: $height
+    margin: 2px
+    color: $color
+    font-size: 1.2em
+    font-weight: 600
+    border: none
+    cursor: pointer
+    transition: 0.2s ease
+    @media screen and (max-width: $xs)
+        width: 50px
+        height: 50px
+    &:hover
+        opacity: 0.85
+        color: $black
+
+// Setiap Component Button Class
+.btn-input
+    @include btn-calculator()
+
+.btn-del
+    @include btn-calculator($red)
+
+.btn-clear
+    @include btn-calculator($blue)
+
+.btn-equal
+    @include btn-calculator($primary, 75px, 154px )
+    @media screen and (max-width: $xs)
+        width: 50px
+        height: 104px
+
+.btn-zero
+    @include btn-calculator($primary, 154px, 75px)
+    @media screen and (max-width: $xs)
+        width: 104px
+        height: 50px

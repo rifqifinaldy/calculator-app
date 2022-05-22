@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator App</title>
-    <link rel="stylesheet" href="./style/style.css">
+    <link rel="icon" type="image/x-icon" href="./public/favicon/favicon.ico" />
+    <link rel="stylesheet" href="./style/style.css" />
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
@@ -14,39 +15,190 @@
   </head>
   <body>
     <div class="calculator">
+      <!-- Input Display -->
       <form class="form">
-        <input class="input-display" />
+        <input disabled class="input-display" />
       </form>
+      <!-- * -- * -->
+
+      <!-- Button Button untuk Input dan memanggil function -->
       <table>
         <tr>
-          <td><input type="button" value="C" onclick="reset()"/></td>
-          <td><input type="button" value="/" onclick="insert('/')"/></td>
-          <td><input type="button" value="<" onclick="backspace()"/></td>
-          <td><input type="button" value="X" onclick="insert('*')"/></td>
+          <!-- Button Untuk Reset -->
+          <td>
+            <input
+              class="btn-clear"
+              type="button"
+              value="AC"
+              onclick="reset()"
+            />
+          </td>
+          <!-- * -- * -->
+
+          <!-- Button Untuk Hapus -->
+          <td>
+            <input
+              class="btn-del"
+              class="btn-del"
+              type="button"
+              value="Del"
+              onclick="backspace()"
+            />
+          </td>
+          <!-- * -- * -->
+
+          <!-- Button Input Value -->
+          <td>
+            <input
+              class="btn-input"
+              type="button"
+              value="/"
+              onclick="insert('/')"
+            />
+          </td>
+          <td>
+            <input
+              class="btn-input"
+              type="button"
+              value="X"
+              onclick="insert('*')"
+            />
+          </td>
         </tr>
         <tr>
-          <td><input type="button" value="7" onclick="insert(7)"/></td>
-          <td><input type="button" value="8" onclick="insert(8)"/></td>
-          <td><input type="button" value="9" onclick="insert(9)"/></td>
-          <td><input type="button" value="-" onclick="insert('-')"/></td>
+          <td>
+            <input
+              class="btn-input"
+              type="button"
+              value="7"
+              onclick="insert(7)"
+            />
+          </td>
+          <td>
+            <input
+              class="btn-input"
+              type="button"
+              value="8"
+              onclick="insert(8)"
+            />
+          </td>
+          <td>
+            <input
+              class="btn-input"
+              type="button"
+              value="9"
+              onclick="insert(9)"
+            />
+          </td>
+          <td>
+            <input
+              class="btn-input"
+              type="button"
+              value="-"
+              onclick="insert('-')"
+            />
+          </td>
         </tr>
         <tr>
-          <td><input type="button" value="4" onclick="insert(4)"/></td>
-          <td><input type="button" value="5" onclick="insert(5)"/></td>
-          <td><input type="button" value="6" onclick="insert(6)"/></td>
-          <td><input type="button" value="+" onclick="insert('+')"/></td>
+          <td>
+            <input
+              class="btn-input"
+              type="button"
+              value="4"
+              onclick="insert(4)"
+            />
+          </td>
+          <td>
+            <input
+              class="btn-input"
+              type="button"
+              value="5"
+              onclick="insert(5)"
+            />
+          </td>
+          <td>
+            <input
+              class="btn-input"
+              type="button"
+              value="6"
+              onclick="insert(6)"
+            />
+          </td>
+          <td>
+            <input
+              class="btn-input"
+              type="button"
+              value="+"
+              onclick="insert('+')"
+            />
+          </td>
         </tr>
         <tr>
-          <td><input type="button" value="1" onclick="insert(1)" /></td>
-          <td><input type="button" value="2" onclick="insert(2)"/></td>
-          <td><input type="button" value="3" onclick="insert(3)"/></td>
-          <td rowspan="2"><input class="equal-button" type="button" value="=" onclick="equal()"/></td>
+          <td>
+            <input
+              class="btn-input"
+              type="button"
+              value="1"
+              onclick="insert(1)"
+            />
+          </td>
+          <td>
+            <input
+              class="btn-input"
+              type="button"
+              value="2"
+              onclick="insert(2)"
+            />
+          </td>
+          <td>
+            <input
+              class="btn-input"
+              type="button"
+              value="3"
+              onclick="insert(3)"
+            />
+          </td>
+          <!-- * -- * -->
+
+          <!-- Button untuk generate value -->
+          <td rowspan="2">
+            <input
+              class="btn-equal"
+              type="button"
+              value="="
+              onclick="equal()"
+            />
+          </td>
+          <!-- * -- * -->
         </tr>
+
+        <!-- Input Value 0 -->
         <tr>
-          <td colspan="2"><input class="zero-button" type="button" value="0" onclick="insert(0)"/></td>
-          <td><input type="button" value="." onclick="insert('.')"/></td>
+          <td colspan="2">
+            <input
+              class="btn-zero"
+              type="button"
+              value="0"
+              onclick="insert(0)"
+            />
+          </td>
+          <!-- * -- * -->
+
+          <!-- Input . -->
+          <td>
+            <input
+              class="btn-input"
+              type="button"
+              value="."
+              onclick="insert('.')"
+            />
+          </td>
+          <!-- * -- * -->
         </tr>
       </table>
+      <div class="developer">
+        <p>By Rifqi Finaldy</p>
+      </div>
     </div>
     <script type="text/javascript" src="./scripts/main.js"></script>
   </body>

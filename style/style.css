@@ -1,17 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&family=Orbitron:wght@400;500;700&display=swap");
-* {
-  margin: 0px;
-  padding: 0px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: "Orbitron", sans-serif;
-}
-
-body {
-  background: #fafafa;
-  font-size: 1.2rem;
-}
-
 .calculator {
   position: absolute;
   width: 368px;
@@ -24,7 +11,16 @@ body {
           transform: translate(-50%, -50%);
 }
 
-.calculator form .input-display {
+@media screen and (max-width: 280px) {
+  .calculator {
+    width: 100%;
+  }
+  .calculator table {
+    width: 100%;
+  }
+}
+
+.calculator .input-display {
   width: 100%;
   background: #252525;
   color: #41c0b1;
@@ -38,7 +34,17 @@ body {
   margin-bottom: 0.5em;
 }
 
-.calculator input[type="button"] {
+.calculator .developer {
+  width: 100%;
+}
+
+.calculator .developer p {
+  color: #d81159;
+  text-align: center;
+  font-size: 10px;
+}
+
+.btn-input {
   width: 75px;
   height: 75px;
   margin: 2px;
@@ -47,13 +53,146 @@ body {
   font-weight: 600;
   border: none;
   cursor: pointer;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
 }
 
-.calculator input.equal-button {
+@media screen and (max-width: 280px) {
+  .btn-input {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.btn-input:hover {
+  opacity: 0.85;
+  color: #252525;
+}
+
+.btn-del {
+  width: 75px;
+  height: 75px;
+  margin: 2px;
+  color: #d81159;
+  font-size: 1.2em;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+@media screen and (max-width: 280px) {
+  .btn-del {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.btn-del:hover {
+  opacity: 0.85;
+  color: #252525;
+}
+
+.btn-clear {
+  width: 75px;
+  height: 75px;
+  margin: 2px;
+  color: #1d4e89;
+  font-size: 1.2em;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+@media screen and (max-width: 280px) {
+  .btn-clear {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.btn-clear:hover {
+  opacity: 0.85;
+  color: #252525;
+}
+
+.btn-equal {
+  width: 75px;
   height: 154px;
+  margin: 2px;
+  color: #41c0b1;
+  font-size: 1.2em;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
 }
 
-.calculator input.zero-button {
+@media screen and (max-width: 280px) {
+  .btn-equal {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.btn-equal:hover {
+  opacity: 0.85;
+  color: #252525;
+}
+
+@media screen and (max-width: 280px) {
+  .btn-equal {
+    width: 50px;
+    height: 104px;
+  }
+}
+
+.btn-zero {
   width: 154px;
+  height: 75px;
+  margin: 2px;
+  color: #41c0b1;
+  font-size: 1.2em;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+@media screen and (max-width: 280px) {
+  .btn-zero {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.btn-zero:hover {
+  opacity: 0.85;
+  color: #252525;
+}
+
+@media screen and (max-width: 280px) {
+  .btn-zero {
+    width: 104px;
+    height: 50px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Orbitron', sans-serif;
+  overflow: hidden;
+}
+
+body {
+  background: #fafafa;
 }
 /*# sourceMappingURL=style.css.map */
